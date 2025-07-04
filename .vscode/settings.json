@@ -27,5 +27,9 @@
     {
       "file": ".github/copilot-commit-message-instructions.md"
     }
-  ]
+  ],
+  "[python]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
 }
