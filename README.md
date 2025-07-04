@@ -1,2 +1,57 @@
-# python-template
-This is a general python template including basic setup and folder structure
+---
+post_title: Python Template Project
+author1: Your Name
+post_slug: python-template
+microsoft_alias: your-alias
+featured_image: https://example.com/image.png
+categories: [python, template]
+tags: [python, project, template, starter]
+ai_note: true
+summary: A general-purpose Python template with basic setup and folder structure for new projects.
+post_date: 2025-07-04
+---
+
+## Overview
+
+This repository provides a general-purpose Python template, including a basic setup and recommended folder structure. It is designed to help you quickly start new Python projects with best practices in mind.
+
+## Features
+
+- Organized folder structure (`src/` for source code)
+- Example entry point (`main.py`)
+- Ready for version control
+- Easy to extend for larger projects
+
+## Folder Structure
+
+```text
+python-template/
+├── LICENSE
+├── README.md
+├── src/
+│   └── main.py
+```
+
+## Getting Started
+
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/your-username/python-template.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd python-template
+   ```
+3. Start developing your Python project in the `src/` folder.
+
+## Usage
+
+Run the entry point script:
+
+```sh
+python src/main.py
+```
+
+## License
+
+This project is licensed under the terms of the LICENSE file in this repository.
