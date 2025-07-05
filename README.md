@@ -19,6 +19,7 @@ This repository provides a general-purpose Python template, including a basic se
 
 - Organized folder structure (`src/` for source code)
 - Example entry point (`main.py`)
+- Organized folder structure (`tests/` for tests code)
 - Ready for version control
 - Easy to extend for larger projects
 
@@ -30,6 +31,8 @@ python-template/
 ├── README.md
 ├── src/
 │   └── main.py
+├── tests/
+│   └── tests.py
 ```
 
 ## Getting Started
