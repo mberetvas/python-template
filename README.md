@@ -42,7 +42,11 @@ python-template/
    ```sh
    cd python-template
    ```
-3. Start developing your Python project in the `src/` folder.
+3. (Optional) Install development dependencies, including pytest for testing:
+   ```sh
+   pip install -r requirements.txt
+   ```
+4. Start developing your Python project in the `src/` folder.
 
 ## Usage
 
