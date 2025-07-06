@@ -32,7 +32,7 @@ python-template/
 ├── src/
 │   └── main.py
 ├── tests/
-│   └── tests.py
+    └── tests.py
 ```
 
 ## Getting Started
@@ -50,6 +50,19 @@ python-template/
    pip install -r requirements.txt
    ```
 4. Start developing your Python project in the `src/` folder.
+
+## Using uv (Astral Package Manager)
+
+[uv](https://docs.astral.sh/uv/) is an extremely fast Python package and project manager, written in Rust. It is recommended to use uv for managing dependencies and virtual environments in this project.
+
+To create a new uv-managed virtual environment and install dependencies:
+
+```sh
+uv venv .venv
+uv pip install -r requirements.txt
+```
+
+For more details, see the [uv documentation](https://docs.astral.sh/uv/).
 
 ## Usage
 
