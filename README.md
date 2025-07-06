@@ -59,6 +59,22 @@ Run the entry point script:
 python src/main.py
 ```
 
+## Testing
+
+Run all tests with pytest:
+
+```sh
+pytest
+```
+
+## Code Quality
+
+Check code quality with pylint:
+
+```sh
+pylint src/ tests/
+```
+
 ## License
 
 This project is licensed under the terms of the LICENSE file in this repository.
