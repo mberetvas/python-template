@@ -69,10 +69,10 @@ pytest
 
 ## Code Quality
 
-Check code quality with pylint:
+Check code quality with Ruff:
 
 ```sh
-pylint src/ tests/
+ruff check src/ tests/
 ```
 
 ## License
