@@ -32,4 +32,6 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
+  "ruff.configuration": "Ruff-config/ruff.toml",
+  "ruff.configurationPreference": "filesystemFirst"
 }
