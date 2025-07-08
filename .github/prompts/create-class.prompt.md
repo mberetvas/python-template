@@ -1,23 +1,18 @@
 ---
-mode: agent
-description: Create a fully-typed Python class in selection file
+description: "Generate a Python class with an __init__ method, type hints, and a docstring."
 ---
+# Task: Generate a Python Class
 
-Target file: `${file}`  
-Class name: `${input:ClassName}`  
-Key responsibilities: `${input:responsibilities}`
+Based on the following requirements, please generate a Python class.
 
-Tasks:
-1. Inject a new class with:
-   • `@dataclass(slots=True)` if the class is primarily data, else a
-     regular class.  
-   • Immutable design (`frozen=True`) when feasible.  
-   • Rich comparison (`__lt__`, `__eq__`) and `__str__`.  
-2. Add Google-style docstring incl. examples.  
-3. Append a minimal pytest test stub in comment form (`# >>>`).
+**Requirements:**
+- Class Name: `${input:ClassName}`
+- Description: `${input:ClassDescription}`
 
-Only modify the regions wrapped by:
-
-```python
-# === CLASS START ===
-# === CLASS END ===
+**Instructions:**
+1.  The class must include an `__init__` method.
+2.  All method arguments and return types must have PEP 484 type hints.
+3.  Generate a Google-style docstring for the class and its `__init__` method.
+4.  Include placeholder methods if the description implies behavior (e.g., `load_data`, `process_item`).
+5.  Adhere to PEP 8 standards.
+6.  Reference our project's conventions: [my-python-style.instructions.md]
