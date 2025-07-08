@@ -20,6 +20,7 @@ A professional, modern, and opinionated Python project template designed to kick
   - [GitHub Copilot Integration](#github-copilot-integration)
   - [Using Custom Prompts](#using-custom-prompts)
   - [Available Prompts](#available-prompts)
+- [Instructions & Chat Modes](#instructions--chat-modes)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
@@ -188,6 +189,38 @@ The template includes the following ready-to-use prompts:
 - **`explain-code-block.md`** - Get detailed code explanations
 
 Each prompt is designed to work with code selections and provides context-aware suggestions following Python best practices.
+
+## Instructions & Chat Modes
+
+**Instructions files** (in `.github/instructions/`) define coding standards, best practices, or project-specific rules for GitHub Copilot and compatible tools. When present, these files guide Copilot to generate, review, and refactor code according to your team's requirements. For example, an instructions file can enforce PEP 8, require type hints, or specify how to handle edge cases in Python code.
+
+**Chatmodes files** (in `.github/chatmodes/`) define custom behaviors or workflows for Copilot Chat. Each chatmode can change how Copilot responds in chat, such as acting as a code reviewer, pair programmer, or security auditor. By switching chatmodes, you can tailor Copilot's responses to different development scenarios or team roles.
+
+Both instructions and chatmodes are automatically detected by VS Code and Copilot if present, and can be referenced in Copilot Chat using the `@workspace` command, just like prompts.
+
+**Example usage:**
+- `@workspace /instructions/python-coding-conventions` — Apply your custom Python coding rules
+- `@workspace /chatmodes/ai-reviewer` — Switch to a custom AI reviewer chat mode
+
+> Add your own files to `.github/instructions/` and `.github/chatmodes/` to further customize Copilot's behavior for your project.
+
+### Files in `.github/instructions/`
+- **python-codegeneration.instructions.md** — Python coding conventions and guidelines: Enforces PEP 8, type hints, docstrings, and best practices for Python code generation.
+- **testgeneration.instructions.md** — Guidelines for generating pytest unit & integration tests: Specifies naming, structure, fixtures, and parametrization for tests.
+- **reviewSelection.instructions.md** — Standard code review checklist for Python projects: Provides a structured peer review process with actionable, friendly feedback.
+- **copilot-commit-message-instructions.md** — Commit message guidelines: Enforces Conventional Commits format with gitmoji and clear, informative commit messages.
+
+### Files in `.github/chatmodes/`
+- **refine-issue.chatmode.md** — Refine requirements or issues: Adds acceptance criteria, technical considerations, edge cases, and NFRs to GitHub issues.
+- **prd.chatmode.md** — Product Requirements Document (PRD) mode: Generates comprehensive PRDs in Markdown, including user stories and acceptance criteria.
+- **planner.chatmode.md** — Planning mode: Generates implementation plans for new features or refactoring, including requirements and testing steps.
+- **markdown-master.chatmode.md** — Markdown content standards: Enforces documentation and content creation rules for Markdown files.
+- **explainer.chatmode.md** — Explainer mode: Systematically explains code with context, structure, and clarity for developers.
+- **debug.chatmode.md** — Debug mode: Guides users through a structured debugging process to identify and resolve bugs.
+- **database.chatmode.md** — Database administrator mode: Assists with managing, querying, and optimizing relational databases.
+- **4.1-Beast.chatmode.md** — GPT-4.1 Coding Agent: A system prompt for a top-notch coding agent that manages tasks, todo lists, and problem resolution.
+
+> Add or customize files in these folders to further tailor Copilot's behavior for your team or project.
 
 ## Project Structure
 
