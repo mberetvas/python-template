@@ -34,10 +34,22 @@
       "file": ".github/instructions/copilot-commit-message-instructions.md"
     }
   ],
+  "github.copilot.chat.testGeneration.useInstructionFiles": true,
+  "github.copilot.chat.testGeneration.instructions": [
+    {
+      "file": ".github/instructions/testgeneration.instructions.md"
+    }
+  ],
   "chat.promptFiles": true,
   "github.copilot.chat.promptFilesLocations": {
     ".github/prompts": true
   },
+  "github.copilot.chat.reviewSelection.enabled": true,
+  "github.copilot.chat.reviewSelection.instructions": [
+    {
+      "file": ".github/instructions/reviewSelection.instructions.md"
+    }
+  ],
   "[python]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "charliermarsh.ruff"

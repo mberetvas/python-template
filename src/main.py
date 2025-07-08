@@ -1,10 +1,19 @@
-# This file serves as the entry point for the Python project.
+"""
+This file serves as the entry point for the Python project.
+"""
 
 
-def main():
+def main() -> None:
     """
-    Main function to execute the application logic.
+    Entry point for the Python Template Application.
+
+    This function currently prints a welcome message and serves as a placeholder
+    for the main application logic. It takes no arguments and returns nothing.
+
+    Future application logic should be added where indicated.
     """
+    print("Welcome to the Python Template Application!")
+    # Add your application logic here
     print("Welcome to the Python Template Application!")
     # Add your application logic here
 
