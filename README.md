@@ -16,6 +16,11 @@ A professional, modern, and opinionated Python project template designed to kick
   - [Running Tests](#running-tests)
   - [Code Quality](#code-quality)
   - [Configuring Ruff](#configuring-ruff)
+- [AI-Powered Development](#ai-powered-development)
+  - [GitHub Copilot Integration](#github-copilot-integration)
+  - [Using Custom Prompts](#using-custom-prompts)
+  - [Available Prompts](#available-prompts)
+- [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -23,10 +28,13 @@ A professional, modern, and opinionated Python project template designed to kick
 
 -   **Modern Tooling**: Utilizes `uv` for fast package management.
 -   **Organized Structure**: A clean `src/` layout for source code and `tests/` for tests.
--   **Testing Ready**: Comes with `pytest` configured for running tests.
+-   **Testing Ready**: Comes with `pytest` configured for running tests with JUnit XML output.
 -   **Code Quality**: Integrated with `ruff` for linting and formatting to maintain high code standards.
 -   **CI/CD Ready**: Includes a basic GitHub Actions workflow for continuous integration.
--   **Version Control**: Pre-configured `.gitignore` file.
+-   **Version Control**: Pre-configured `.gitignore` file with comprehensive Python exclusions.
+-   **VS Code Integration**: Pre-configured VS Code settings for optimal development experience.
+-   **AI-Powered Development**: Extensive collection of GitHub Copilot prompts for automated code generation, testing, and review.
+-   **Pull Request Templates**: Structured PR templates for consistent contributions.
 
 ## Getting Started
 
@@ -79,15 +87,20 @@ uv run src/main.py
 
 ### Running Tests
 
-This template uses `pytest` for testing.
+This template uses `pytest` for testing with JUnit XML output for CI/CD integration.
+
 ```sh
 # Install pytest if you haven't already
 uv add --dev pytest
 
-# Run tests
-# don't forget to activate the venv first !
+# Run tests with JUnit XML output
+pytest --junitxml=junit/test-results.xml
+
+# Run tests (simple)
 pytest
 ```
+
+The test results are automatically saved to `junit/test-results.xml` for integration with CI/CD systems.
 
 ### Code Quality
 
@@ -120,6 +133,106 @@ Ruff's behavior is controlled by the `Ruff-config/ruff.toml` file. This template
 -   **Enabling a standard set of rules** for code quality.
 
 You can customize the linting and formatting rules by editing this file. For a complete list of options, see the [official Ruff documentation](https://docs.astral.sh/ruff/configuration/).
+
+## AI-Powered Development
+
+This template includes a comprehensive collection of GitHub Copilot prompts designed to accelerate your Python development workflow. These prompts are located in the `.github/prompts/` directory and are automatically recognized by VS Code with GitHub Copilot.
+
+### GitHub Copilot Integration
+
+The project is pre-configured to work seamlessly with GitHub Copilot through VS Code settings:
+
+- **Prompt Files**: Custom prompts are automatically detected from `.github/prompts/`
+- **Chat Modes**: AI-powered development assistance
+- **Instructions**: Context-aware coding guidelines
+
+### Using Custom Prompts
+
+To use the included prompts:
+
+1. **Open VS Code** with the GitHub Copilot extension installed
+2. **Select code** you want to work with
+3. **Open GitHub Copilot Chat** (Ctrl+Shift+I / Cmd+Shift+I)
+4. **Type `@workspace`** followed by the prompt name (e.g., `@workspace /write-pytest`)
+5. **Execute the prompt** to generate code, tests, or reviews
+
+### Available Prompts
+
+The template includes the following ready-to-use prompts:
+
+#### Code Generation
+- **`asyncify-io.prompt.md`** - Convert synchronous I/O operations to async/await
+- **`create-class.prompt.md`** - Generate Python classes with proper structure
+- **`extract-function.prompt.md`** - Extract reusable functions from code blocks
+- **`generate-dataclass.prompt.md`** - Create Python dataclasses with type hints
+- **`generate-new-cli.prompt.md`** - Generate complete CLI applications
+- **`quick-cli.prompt.md`** - Convert code selections into CLI scripts
+
+#### Testing & Documentation
+- **`docstringify.prompt.md`** - Generate comprehensive docstrings
+- **`generate-pytest-tests.prompt.md`** - Create comprehensive test suites
+- **`write-pytest.prompt.md`** - Generate pytest cases for selected code
+
+#### Code Review & Quality
+- **`lightweight-review.prompt.md`** - Quick code quality assessment
+- **`review-code-general.prompt.md`** - Comprehensive code review
+- **`review-code-performance.prompt.md`** - Performance-focused code analysis
+- **`security-review.prompt.md`** - Security-centric code review
+
+#### Refactoring & Optimization
+- **`optimize-loop.prompt.md`** - Optimize loop performance
+- **`refactor-add-error-handling.prompt.md`** - Add robust error handling
+- **`refactor-readability.prompt.md`** - Improve code readability
+
+#### Utilities
+- **`explain-code-block.md`** - Get detailed code explanations
+
+Each prompt is designed to work with code selections and provides context-aware suggestions following Python best practices.
+
+## Project Structure
+
+```
+python-template/
+├── .github/
+│   ├── prompts/               # AI-powered development prompts
+│   │   ├── asyncify-io.prompt.md
+│   │   ├── create-class.prompt.md
+│   │   ├── docstringify.prompt.md
+│   │   ├── explain-code-block.md
+│   │   ├── extract-function.prompt.md
+│   │   ├── generate-dataclass.prompt.md
+│   │   ├── generate-new-cli.prompt.md
+│   │   ├── generate-pytest-tests.prompt.md
+│   │   ├── lightweight-review.prompt.md
+│   │   ├── optimize-loop.prompt.md
+│   │   ├── quick-cli.prompt.md
+│   │   ├── refactor-add-error-handling.prompt.md
+│   │   ├── refactor-readability.prompt.md
+│   │   ├── review-code-general.prompt.md
+│   │   ├── review-code-performance.prompt.md
+│   │   ├── security-review.prompt.md
+│   │   └── write-pytest.prompt.md
+│   ├── workflows/
+│   │   └── ci-python.yml      # GitHub Actions CI/CD workflow
+│   └── pull_request_template.md
+├── .vscode/
+│   └── settings.json          # VS Code workspace settings
+├── junit/
+│   └── test-results.xml       # JUnit test results (generated)
+├── Ruff-config/
+│   └── ruff.toml             # Ruff linting and formatting configuration
+├── src/
+│   ├── __init__.py
+│   └── main.py               # Main application entry point
+├── tests/
+│   ├── __init__.py
+│   ├── conftest.py           # pytest configuration
+│   └── tests.py              # Test cases
+├── .gitignore                # Git ignore rules
+├── LICENSE                   # MIT License
+├── README.md                 # This file
+└── requirements.txt          # Python dependencies
+```
 
 ## Contributing
 
