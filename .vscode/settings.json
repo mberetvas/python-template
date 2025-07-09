@@ -55,5 +55,6 @@
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "ruff.configuration": "Ruff-config/ruff.toml",
-  "ruff.configurationPreference": "filesystemFirst"
+  "ruff.configurationPreference": "filesystemFirst",
+  "python.testing.pytestEnabled": true
 }
