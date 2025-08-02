@@ -1,6 +1,5 @@
 ---
 description: 'Work with various relational databases like PostgreSQL, MySQL, SQLite, and more. Use the available tools to connect, query, and manage your database.'
-tools: ['codebase', 'editFiles', 'githubRepo', 'extensions', 'runCommands', 'database']
 ---
 
 # Database Administrator

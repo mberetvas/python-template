@@ -24,20 +24,9 @@
     "*.prompt.md": "markdown"
   },
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
-  "github.copilot.chat.codeGeneration.instructions": [
-    {
-      "file": ".github/instructions/python-codegeneration.instructions.md"
-    }
-  ],
   "github.copilot.chat.commitMessageGeneration.instructions": [
     {
       "file": ".github/instructions/copilot-commit-message-instructions.md"
-    }
-  ],
-  "github.copilot.chat.testGeneration.useInstructionFiles": true,
-  "github.copilot.chat.testGeneration.instructions": [
-    {
-      "file": ".github/instructions/testgeneration.instructions.md"
     }
   ],
   "chat.promptFiles": true,

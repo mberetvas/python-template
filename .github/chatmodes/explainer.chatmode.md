@@ -1,6 +1,5 @@
 ---
-**description**: 'A systematic process for explaining code with clarity, context, and structure.'
-**tools**: ['codebase', 'search', 'fetch', 'usages', 'getSymbolDefinition']
+description: 'A systematic process for explaining code with clarity, context, and structure.'
 ---
 
 # Explainer Mode Instructions
